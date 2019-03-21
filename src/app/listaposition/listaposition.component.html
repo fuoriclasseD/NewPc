@@ -1,0 +1,64 @@
+<div>
+  <br>
+  <div class="container">
+    <div class="container">
+      <div fxLayout="column" fxLayoutGap="20px" fxLayout.gt-md="row"  fxLayoutAlign="space-around center" class="content">
+        <div class="blocks" >
+          <button button="submit" mat-raised-button color="primary" (click)="openDialog()">
+            <mat-icon>add</mat-icon> Add Position
+          </button>
+        </div><!--
+        <div class="blocks">
+          <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+          <mat-menu #menu="matMenu" mat-raised-button color="primary">
+            <button mat-menu-item>Prodotto 1</button>
+            <button mat-menu-item>Prodotto 2</button>
+          </mat-menu>
+        </div>-->
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div fxLayout="row" fxLayoutAlign="center center" class="content">
+        <mat-card class="card" >
+          <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+            <h3>Lista Position</h3>
+          </mat-card-title>
+          <mat-card-content>
+            <div class="example-container mat-elevation-z8">
+              <mat-table #table [dataSource]="dataSource">
+                <ng-container matColumnDef="cod_position">
+                  <mat-header-cell *matHeaderCellDef> Cod Position </mat-header-cell>
+                  <mat-cell *matCellDef="let element"> {{element.codposition}} </mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="prodotto">
+                  <mat-header-cell *matHeaderCellDef> Prodotto </mat-header-cell>
+                  <mat-cell *matCellDef="let element"> {{element.prodotto}} </mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="stato">
+                  <mat-header-cell *matHeaderCellDef> Stato </mat-header-cell>
+                  <mat-cell *matCellDef="let element"> {{element.stato}} </mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="data">
+                  <mat-header-cell *matHeaderCellDef> Data Emissione </mat-header-cell>
+                  <mat-cell *matCellDef="let element"> {{element.dataemis  | date: 'd/M/y'}}  </mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="delete">
+                  <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                  <mat-cell *matCellDef="let element">
+                    <a (click)="deletePost(element.position)" type="button">
+                      <mat-icon class="icon">settings</mat-icon>
+                    </a>
+                  </mat-cell>
+                </ng-container>
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+              </mat-table>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+    
+  </div>
+</div>

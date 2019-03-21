@@ -1,0 +1,82 @@
+<h1 mat-dialog-title>{{data}}</h1>
+<!--
+<div mat-dialog-content>
+  <form class="example-form" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input matInput placeholder="Post Pippo" type="text" required [(ngModel)]="blogPost.title" name="name">
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput placeholder="Post Body" required [(ngModel)]="blogPost.body" name="body"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select matInput placeholder="Post Category" required [(ngModel)]="blogPost.category" name="category">
+        <mat-option *ngFor="let cat of categories" [value]="cat.value">
+          {{ cat.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-raised-button type="submit" color="primary">Save</button>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button class="close" (click)="onNoClick()" color="warn">Cancel</button>
+</div>
+-->
+
+<mat-nav-list>
+  <mat-list-item  >
+    <div mat-line>
+     Prodotto 1
+    </div>
+    <button mat-raised-button type="submit" color="primary">Save</button>
+  </mat-list-item>
+  <mat-list-item  >
+    <div mat-line>
+     Prodotto 2
+    </div>
+    <button mat-raised-button type="submit" color="primary">Save</button>
+  </mat-list-item>  
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>View profile</button>
+    <button mat-menu-item>Add contact</button>
+  </mat-menu>
+</mat-nav-list>
+<!--
+    <div mat-dialog-content>
+      <div fxLayout="row" fxLayoutAlign="center center" class="content">
+        <mat-card class="card" >
+          <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+            <h3>Lista Prodotti</h3>
+          </mat-card-title>
+          <mat-card-content>
+            <div class="example-container mat-elevation-z8">
+              <mat-table #table [dataSource]="dataSource">
+                <ng-container matColumnDef="cod_position">
+                  <mat-header-cell *matHeaderCellDef> Prodotto Bnl </mat-header-cell>
+                  <mat-cell *matCellDef="let element"> Classic </mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="prodotto">
+                  <mat-header-cell *matHeaderCellDef> Circuiro </mat-header-cell>
+                  <mat-cell *matCellDef="let element"> Visa </mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="stato">
+                  <mat-header-cell *matHeaderCellDef> Aggiuntiva </mat-header-cell>
+                  <mat-cell *matCellDef="let element"> SI </mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="delete">
+                  <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                  <mat-cell *matCellDef="let element">
+                    <a (click)="deletePost(element.position)" type="button">
+                      <mat-icon class="icon">settings</mat-icon>
+                    </a>
+                  </mat-cell>
+                </ng-container>
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+              </mat-table>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+-->
