@@ -12,14 +12,18 @@ import {DataService} from './data/data.service';
 import {AuthService} from './auth.service';
 import {CarteService} from './data/carte.service';
 
-
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {PositionService} from './data/position.service';
 import {PostDialogComponent} from './post-dialog/post-dialog.component';
-import {FormsModule} from '@angular/forms';
-import { ElencoCarteComponent } from './elenco-carte/elenco-carte.component';
-import { ListapositionComponent } from './listaposition/listaposition.component';
+//import {FormsModule} from '@angular/forms';
+import {ElencoCarteComponent } from './elenco-carte/elenco-carte.component';
+import {ListapositionComponent } from './listaposition/listaposition.component';
 import {GlobalVars} from './global';
+import { StepperComponent } from './stepper/stepper.component';
 
+
+//import {MatTooltipModule} from '@angular/material/dialog';
+//import {MatStepperModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,8 @@ import {GlobalVars} from './global';
     DashboardComponent,
     PostDialogComponent,
     ElencoCarteComponent,
-    ListapositionComponent
+    ListapositionComponent,
+    StepperComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +42,7 @@ import {GlobalVars} from './global';
     FlexLayoutModule,
     AppRouters,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [DataService, AuthService, CarteService, PositionService, GlobalVars],
   bootstrap: [AppComponent],

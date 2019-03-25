@@ -16,6 +16,7 @@ import {
   MatMenuModule,
   MatFormFieldModule,
   MatExpansionModule,
+  MatStepperModule,
 } from '@angular/material';
 
 @NgModule({
@@ -52,6 +53,7 @@ import {
     MatMenuModule,
     MatFormFieldModule,
     MatExpansionModule,
+    MatStepperModule,
 
   ]
 })
