@@ -1,9 +1,9 @@
 
-<h3>Horizontal Stepper</h3>
+<h3>Riferimenti Carta</h3>
 <mat-horizontal-stepper [linear]="isLinear" #stepper>
   <mat-step [stepControl]="firstFormGroup">
     <form [formGroup]="firstFormGroup">
-      <ng-template matStepLabel>Fill Basic Information</ng-template>
+      <ng-template matStepLabel>Configurazione Prodotto</ng-template>
       <mat-form-field>
         <input matInput placeholder="First name" formControlName="fnameCtrl" required>
       </mat-form-field>
@@ -19,7 +19,7 @@
   </mat-step>
   <mat-step [stepControl]="secondFormGroup">
     <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>Fill Address</ng-template>
+      <ng-template matStepLabel>Indirizzi</ng-template>
       <mat-form-field>
         <input matInput placeholder="Address" formControlName="addressCtrl" required>
       </mat-form-field>
@@ -29,16 +29,41 @@
       </div>
     </form>
   </mat-step>
+  
+  <mat-step [stepControl]="thirdFormGroup">
+    <form [formGroup]="thirdFormGroup">
+      <ng-template matStepLabel>Patrimoniali</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="stipendio" formControlName="DateScoreCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>  
+  <mat-step [stepControl]="fourthFormGroup">
+    <form [formGroup]="fourthFormGroup">
+      <ng-template matStepLabel>Documento</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="documneto" formControlName="DocCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>   
   <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    You are now done.
+    <ng-template matStepLabel>Delibera</ng-template>
+    Completa la richiesta!
     <div>
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button (click)="stepper.reset()">Reset</button>
     </div>
   </mat-step>
 </mat-horizontal-stepper>
-
+<!--
 <br/><br/><br/>
 
 <h3>Vertical Stepper</h3>
@@ -80,3 +105,4 @@
     </div>
   </mat-step>
 </mat-vertical-stepper>
+-->
